@@ -5,6 +5,7 @@ import requests
 
 def predict(text):
     res = requests.post("http://103.242.175.212:5000/", {"text": text})
+    print(res)
     pred = json.loads(res.text)["pred"]
     return pred
 
